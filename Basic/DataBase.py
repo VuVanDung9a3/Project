@@ -1,0 +1,21 @@
+import sqlite3
+db = sqlite3.connect("school.sql")
+db.execute("DROP TABLE IF EXISTS student")
+db.execute("CREATE TABLE student (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name VARCHAR NOT NULL)")
+db.execute("INSERT INTO student(name) VALUES ('Vu Van Dung')")
+db.execute("INSERT INTO student(name) VALUES ('Do Ngoc Tien')")
+db.execute("INSERT INTO student(name) VALUES ('Bui Dinh Huy')")
+db.execute("INSERT INTO student(name) VALUES ('Trinh Hoai Anh')")
+db.execute("INSERT INTO student(name) VALUES ('Duong Qua')")
+db.execute("INSERT INTO student(name) VALUES ('An To To')")
+db.commit()
+re = db.execute("SELECT * FROM student")
+print(type(re))
+for row in re:
+	print(row)
+db.execute("UPDATE student SET name = \"Co Co\" WHERE id = 3")
+db.execute("DELETE FROM student WHERE id = 2")
+re = db.execute("SELECT * FROM student")
+print(type(re))
+for row in re:
+	print(row)

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remote Control</title>
+	<style type="text/css">
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			background-color: #F2CCF1;
+		}
+		.left {
+			background-color: #F2CCF1;
+			height: 100vh;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			width: 400px;
+			
+		}
+		.right {
+			height: 100vh;
+			background-color: #F2CCF1;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			width: 400px;
+			
+
+		}
+		.center {
+			height: 100vh;
+			padding-top: 200px;
+			background-color: #F0E8F0;
+		}
+		.center input{
+			padding: 15px;
+		}
+		.info {
+			padding-top: 100px;
+			text-align: center;
+			color: red;
+		}
+		.control {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.move {
+			height: auto;
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.move .bottom {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.move .top {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.stop {
+			height: auto;
+			width: auto;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+	</style>
+</head>
+<body scroll="no" style="overflow: hidden; width: 100vw; height: 100vh; margin: 0px">
+	<div class="container">
+		<div class="left">
+			<img src="../static/img/l.png" width="100%">
+		</div>
+
+		<div class="center">
+			<div class="control">
+				<div class="move">
+				<div class="top">
+					<form action="/1" method="POST">
+						<input type="image" name="direction" src="../static/img/left.svg" value="left" style="width: 80px;">
+					</form>
+					<form action="/2" method="POST">
+						<input type="image" name="direction" src="../static/img/forward.svg" value="forward" style="width: 80px;">
+					</form>
+					<form action="/3" method="POST">
+						<input type="image" name="direction" src="../static/img/right.svg" value="right" style="width: 80px;">
+					</form>
+				</div>
+				<div class="bottom">
+					<form action="/4" method="POST">
+						<input type="image" name="direction" src="../static/img/reverse.svg" value="backword" style="width: 80px;">
+					</form>
+				</div>
+			</div>
+			<div class="stop">
+				<form action="/5" method="POST">
+					<input type="image" name="direction" src="../static/img/stop.svg" value="stop" style="width: 80px;">
+				</form>
+			</div>
+			</div>
+
+			<div class="info"> 
+				<h2><i>Coding is life!!</i></h2>
+			</div>
+		</div>
+
+		<div class="right">
+			<img src="../static/img/r.png" width="100%">
+		</div>
+	</div>
+</body>
+</html>

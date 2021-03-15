@@ -1,0 +1,14 @@
+body{
+	text-align: center;
+	background : #54ff9f;
+	color: #fff5ee;
+}
+.botton{
+	font: bold 16px Arial;
+	text-decoration: none;
+	background-color: aqua;
+	background-color: #EEEEEE;
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+
